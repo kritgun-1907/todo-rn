@@ -17,7 +17,7 @@ export const addTodo=mutation({
     },
 });
 
-export const toggleToDo=mutation({
+export const toggleTodo=mutation({
     args:{id:v.id("todos")},
     handler:async(ctx,args)=>{
         const toDo=await ctx.db.get(args.id);
@@ -27,7 +27,7 @@ export const toggleToDo=mutation({
     },
 });
 
-export const deleteToDo = mutation({
+export const deleteTodo = mutation({
   args: { id: v.id("todos") },
   handler: async (ctx, args) => {
     await ctx.db.delete(args.id);
